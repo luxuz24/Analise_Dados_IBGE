@@ -1,7 +1,6 @@
 package org.example.model;
 
 import java.math.BigDecimal;
-import java.sql.Wrapper;
 
 public class DadosIbge {
 

@@ -35,6 +35,59 @@ public abstract class GenericDao<T extends DadosIbge> {
         return obj;
     }
 
+    public List<T> buscarComFiltros(Integer anoFiltro, String regiaoFiltro) {
+
+
+        StringBuilder sqlBuilder = new StringBuilder("SELECT * FROM ");
+        sqlBuilder.append(getTableName());
+        sqlBuilder.append(" WHERE 1=1");
+
+        List<Object> parametros = new ArrayList<>();
+
+
+        if (anoFiltro != null && anoFiltro > 0) {
+            sqlBuilder.append(" AND \"Ano\" = ?");
+            parametros.add(anoFiltro);
+        }
+
+
+        String colunaRegioes = "\"Grandes Regiões e Unidades da Federação\"";
+        if (regiaoFiltro != null && !regiaoFiltro.isEmpty() && !regiaoFiltro.equalsIgnoreCase("Todos")) {
+            sqlBuilder.append(" AND ").append(colunaRegioes).append(" = ?");
+            parametros.add(regiaoFiltro);
+        }
+
+
+        sqlBuilder.append(" ORDER BY \"Ano\" ASC, \"Cod.\" ASC");
+
+        String sqlFinal = sqlBuilder.toString();
+        List<T> resultados = new ArrayList<>();
+
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sqlFinal)) {
+
+
+            for (int i = 0; i < parametros.size(); i++) {
+                stmt.setObject(i + 1, parametros.get(i)); // setObject funciona para Integer e String
+            }
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    resultados.add(mapResultSetToObject(rs));
+                }
+            }
+        } catch (SQLException e) {
+            System.err.printf("Erro ao buscar com filtros (Ano: %s, Região: %s) em %s: %s\n",
+                    anoFiltro, regiaoFiltro, getTableName(), e.getMessage());
+            throw new RuntimeException("Erro de SQL ao buscar com filtros", e);
+        }
+        return resultados;
+    }
+
+
+
+
     public List<T> buscarTodos() {
 
         String sql = "SELECT * FROM " + getTableName() + " ORDER BY \"Ano\" ASC, \"Cod.\" ASC";

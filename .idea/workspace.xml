@@ -4,37 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fdb5022-02c2-4c4b-b737-3fac6a2e5849" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TesteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoMoradoresDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoInternetDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoMoradoresDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualInternetDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualMoradoresDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DomicilioInternetPorConexaoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/MoradoresInternetPorConexaoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoMoradoresModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoInternetModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoMoradoresModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualInternetModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualMoradoresModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DomiciliosInternetPorConexaoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/MoradoresInternetPorConexaoModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TesteDAO.java" beforeDir="false" />
+    <list default="true" id="6fdb5022-02c2-4c4b-b737-3fac6a2e5849" name="Changes" comment="feat(data): Implementa Modelo completo e todos os DAOs específicos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AnaliseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ComparacaoRegionalDtoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoAnualDtoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoMultiploDtoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AnaliseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/view/AnalyseView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TesteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TesteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DadosIbgeDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DadosIbge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DadosIbge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TelaPrincipal.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +58,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Executar MainApp.executor": "Run",
+    "Application.MainApp.executor": "Run",
+    "Application.TesteDao.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -79,10 +78,27 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Java-Ide\Analise_Dados_IBGE\src\main\resources\org\example\view" />
+      <recent name="F:\Java-Ide\Analise_Dados_IBGE\src\main\java\org\example\view" />
+      <recent name="F:\Java-Ide\Analise_Dados_IBGE\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Executar MainApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.example.Launcher" />
+      <module name="Analise_Dados_IBGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -100,8 +116,25 @@
       <updated>1761253485964</updated>
       <workItem from="1761253488062" duration="61000" />
       <workItem from="1761253573286" duration="368000" />
-      <workItem from="1761253986551" duration="1177000" />
+      <workItem from="1761253986551" duration="1700000" />
+      <workItem from="1761502941879" duration="1325000" />
+      <workItem from="1761607839484" duration="7350000" />
+      <workItem from="1761686783539" duration="5297000" />
+      <workItem from="1761766864752" duration="857000" />
+      <workItem from="1761767750152" duration="216000" />
+      <workItem from="1761767993681" duration="145000" />
+      <workItem from="1761768155683" duration="336000" />
+      <workItem from="1761768509666" duration="4976000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(data): Implementa Modelo completo e todos os DAOs específicos">
+      <option name="closed" value="true" />
+      <created>1761255363184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761255363184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,5 +150,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(data): Implementa Modelo completo e todos os DAOs específicos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(data): Implementa Modelo completo e todos os DAOs específicos" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

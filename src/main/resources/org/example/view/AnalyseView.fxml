@@ -1,56 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?> <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AnaliseController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AnaliseController">
 
     <left>
         <VBox prefWidth="250.0" spacing="10.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="Análise:">
+                <Label text="Tabela de Análise (Dados Brutos):">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <ComboBox fx:id="comboTabela" prefWidth="250.0" promptText="Selecione a Tabela" />
-
                 <Label text="Ano:">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <ComboBox fx:id="comboAno" prefWidth="250.0" promptText="Selecione o Ano" />
-
                 <Label text="Grandes Regiões:">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
                 <ComboBox fx:id="comboRegiao" prefWidth="250.0" promptText="Selecione a Região" />
-
-                <Label text="Tipo de Conexão:">
+                <Label text="Colunas da Tabela:">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-
                 <CheckBox fx:id="checkSelecionarTodos" mnemonicParsing="false" onAction="#onCheckSelecionarTodosClick" text="Selecionar Todos">
                     <VBox.margin>
                         <Insets bottom="5.0" />
                     </VBox.margin>
                 </CheckBox>
-
                 <ListView fx:id="listTiposConexao" prefHeight="200.0" prefWidth="200.0" />
-
-                <Button fx:id="btnBuscar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBtnBuscarClick" text="Analisar">
+                <Button fx:id="btnBuscar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBtnBuscarClick" text="Analisar Tabela">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
@@ -63,17 +66,112 @@
     </left>
 
     <center>
-        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-            <children>
-                <TableView fx:id="tabelaPrincipal" prefHeight="600.0" prefWidth="630.0" VBox.vgrow="ALWAYS">
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                    </columnResizePolicy>
-                </TableView>
-            </children>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-        </VBox>
+        <TabPane fx:id="tabPanePrincipal" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+
+                <Tab text="Dados Brutos">
+                    <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <TableView fx:id="tabelaPrincipal" prefHeight="600.0" prefWidth="630.0" VBox.vgrow="ALWAYS">
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Análise Gráfica">
+                    <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label text="Fonte dos Dados:" />
+                                        <ComboBox fx:id="comboGraficoTabela" prefWidth="200.0" promptText="Tabela" />
+                                        <Label text="Métrica:" />
+                                        <ComboBox fx:id="comboGraficoMetrica" prefWidth="200.0" promptText="Métrica" />
+                                        <Label text="Região (Barras):" />
+                                        <ComboBox fx:id="comboGraficoRegiao" prefWidth="150.0" promptText="Região" />
+                                        <Label text="Ano (Pizza):" />
+                                        <ComboBox fx:id="comboGraficoAno" prefWidth="100.0" promptText="Ano" />
+                                        <Button fx:id="btnGerarGraficos" mnemonicParsing="false" onAction="#onBtnGerarGraficosClick" text="Gerar Gráficos" />
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <VBox HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <BarChart fx:id="graficoBarrasCrescimento" title="Crescimento Ano a Ano">
+                                                    <xAxis>
+                                                        <CategoryAxis label="Ano" fx:id="eixoXBarras" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis fx:id="eixoYBarras" label="Crescimento (%)" />
+                                                    </yAxis>
+                                                </BarChart>
+                                            </children>
+                                        </VBox>
+                                        <VBox HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <PieChart fx:id="graficoPizzaComparacao" title="Distribuição Regional" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <Tab text="Crescimento Múltiplo">
+                    <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label text="Fonte dos Dados:" />
+                                        <ComboBox fx:id="comboCrescimentoTabela" prefWidth="250.0" promptText="Tabela" />
+                                        <Label text="Região:" />
+                                        <ComboBox fx:id="comboCrescimentoRegiao" prefWidth="200.0" promptText="Região" />
+                                        <Button fx:id="btnGerarCrescimento" mnemonicParsing="false" onAction="#onBtnGerarCrescimentoClick" text="Gerar Tabela de Crescimento" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="tabelaCrescimento" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="colCrescAno" prefWidth="60.0" text="Ano" />
+                                        <TableColumn fx:id="colCrescTotal" prefWidth="75.0" text="Total (%)" />
+                                        <TableColumn fx:id="colCrescDiscada" prefWidth="75.0" text="Discada (%)" />
+                                        <TableColumn fx:id="colCrescBandaLarga" prefWidth="100.0" text="Banda Larga (%)" />
+                                        <TableColumn fx:id="colCrescSomenteBandaLarga" prefWidth="150.0" text="Somente B. Larga (%)" />
+                                        <TableColumn fx:id="colCrescBandaLargaFixa" prefWidth="120.0" text="B. Larga Fixa (%)" />
+                                        <TableColumn fx:id="colCrescSomenteBandaLargaFixa" prefWidth="180.0" text="Somente B. Larga Fixa (%)" />
+                                        <TableColumn fx:id="colCrescBandaLargaMovel" prefWidth="120.0" text="B. Larga Móvel (%)" />
+                                        <TableColumn fx:id="colCrescSomenteBandaLargaMovel" prefWidth="180.0" text="Somente B. Larga Móvel (%)" />
+                                        <TableColumn fx:id="colCrescBandaLargaFixaMovel" prefWidth="150.0" text="B. Larga Fixa e Móvel (%)" />
+                                        <TableColumn fx:id="colCrescSomenteBandaLargaFixaMovel" prefWidth="210.0" text="Somente B. Larga Fixa e Móvel (%)" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
     </center>
 </BorderPane>

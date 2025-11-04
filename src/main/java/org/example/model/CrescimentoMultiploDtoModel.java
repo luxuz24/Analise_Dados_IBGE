@@ -1,6 +1,13 @@
 package org.example.model;
 
-
+/**
+ * Um DTO (Data Transfer Object) que encapsula os resultados da análise de
+ * "Crescimento Múltiplo" (calculada no AnaliseService).
+ *
+ * Cada instância desta classe armazena a variação percentual (ano contra ano)
+ * de TODAS as métricas de conexão para um único ano.
+ * É usado para preencher a tabela na aba "Crescimento Múltiplo".
+ */
 public class CrescimentoMultiploDtoModel {
 
     private int ano;
@@ -14,6 +21,10 @@ public class CrescimentoMultiploDtoModel {
     private double percentualSomenteBandaLargaMovel;
     private double percentualBandaLargaFixaMovel;
     private double percentualSomenteBandaLargaFixaMovel;
+
+    // --- Getters e Setters Padrão ---
+    // Usados pelo JavaFX (PropertyValueFactory) para ler os dados
+    // e preencher as colunas da tabela.
 
     public int getAno() {
         return ano;
@@ -103,9 +114,15 @@ public class CrescimentoMultiploDtoModel {
         this.percentualSomenteBandaLargaFixaMovel = percentualSomenteBandaLargaFixaMovel;
     }
 
+    /**
+     * Construtor padrão.
+     */
     public CrescimentoMultiploDtoModel() {
     }
 
+    /**
+     * Construtor parametrizado.
+     */
     public CrescimentoMultiploDtoModel(int ano, double percentualTotal, double percentualDiscada, double percentualBandaLarga, double percentualSomenteBandaLarga, double percentualBandaLargaFixa, double percentualSomenteBandaLargaFixa, double percentualBandaLargaMovel, double percentualSomenteBandaLargaMovel, double percentualBandaLargaFixaMovel, double percentualSomenteBandaLargaFixaMovel) {
         this.ano = ano;
         this.percentualTotal = percentualTotal;
@@ -120,6 +137,9 @@ public class CrescimentoMultiploDtoModel {
         this.percentualSomenteBandaLargaFixaMovel = percentualSomenteBandaLargaFixaMovel;
     }
 
+    /**
+     * Representação textual do objeto, útil para depuração (logs).
+     */
     @Override
     public String toString() {
         return "CrescimentoMultiploDtoModel{" +

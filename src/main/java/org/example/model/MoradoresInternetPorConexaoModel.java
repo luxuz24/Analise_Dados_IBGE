@@ -2,11 +2,29 @@ package org.example.model;
 
 import java.math.BigDecimal;
 
-public class MoradoresInternetPorConexaoModel extends DadosIbge{
+/**
+ * Classe Modelo que representa os dados da tabela "moradores_internet_por_conexao".
+ * Ela herda todos os seus atributos e métodos da superclasse {@link DadosIbge}.
+ *
+ * Esta classe existe para permitir que o {@link org.example.dao.GenericDao}
+ * trabalhe de forma tipada (type-safe) com esta tabela específica,
+ * e o {@link org.example.dao.MoradoresInternetPorConexaoDao} a utiliza
+ * para criar novas instâncias.
+ */
+public class MoradoresInternetPorConexaoModel extends DadosIbge {
 
+    /**
+     * Construtor padrão.
+     * Chama o construtor da superclasse.
+     */
     public MoradoresInternetPorConexaoModel() {
+        super();
     }
 
+    /**
+     * Construtor parametrizado completo.
+     * Repassa todos os parâmetros para o construtor da superclasse {@link DadosIbge}.
+     */
     public MoradoresInternetPorConexaoModel(Long id, String regioes, Integer ano, BigDecimal total, BigDecimal discada, BigDecimal bandaLarga, BigDecimal somenteBandaLarga, BigDecimal bandaLargaFixa, BigDecimal somenteBandaLargaFixa, BigDecimal bandaLargaMovel, BigDecimal somenteBandaLargaMovel, BigDecimal bandaLargaFixaMovel, BigDecimal somenteBandaLargaFixaMovel) {
         super(id, regioes, ano, total, discada, bandaLarga, somenteBandaLarga, bandaLargaFixa, somenteBandaLargaFixa, bandaLargaMovel, somenteBandaLargaMovel, bandaLargaFixaMovel, somenteBandaLargaFixaMovel);
     }

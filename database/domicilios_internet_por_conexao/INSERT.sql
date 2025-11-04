@@ -83,6 +83,37 @@ INSERT INTO domicilios_internet_por_conexao (
 );
 
 
+INSERT INTO domicilios_internet_por_conexao (
+    "Cod.",
+    "Grandes Regiões e Unidades da Federação",
+    "Ano",
+    "Total",
+    "Discada",
+    "Banda larga",
+    "Somente banda larga",
+    "Banda larga fixa",
+    "Somente banda larga fixa",
+    "Banda larga móvel",
+    "Somente banda larga móvel",
+    "Banda larga fixa e móvel",
+    "Somente banda larga fixa e móvel"
+) VALUES (
+             3,          -- Cód. (Sudeste)
+             ' Região Sudeste',  -- Grandes Regiões...
+             2019,       -- Ano
+             27486000,   -- Total (27.486 * 1000)
+             49000,      -- Discada (49 * 1000)
+             27476000,   -- Banda larga (27.476 * 1000)
+             27143000,   -- Somente banda larga (27.143 * 1000)
+             21755000,   -- Banda larga fixa (21.755 * 1000)
+             3316000,    -- Somente banda larga fixa (3.316 * 1000)
+             24064000,   -- Banda larga móvel (24.064 * 1000)
+             5578000,    -- Somente banda larga móvel (5.578 * 1000)
+             18343000,   -- Banda larga fixa e móvel (18.343 * 1000)
+             18177000    -- Somente banda larga fixa e móvel (18.177 * 1000)
+         );
+
+
 -- Inserindo dados de 2020 para BRASIL (Cod. 1)
 INSERT INTO domicilios_internet_por_conexao (
     "Cod.", "Grandes Regiões e Unidades da Federação", "Ano", "Total", "Discada", "Banda larga", "Somente banda larga", "Banda larga fixa", "Somente banda larga fixa", "Banda larga móvel", "Somente banda larga móvel", "Banda larga fixa e móvel", "Somente banda larga fixa e móvel"

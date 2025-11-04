@@ -4,20 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fdb5022-02c2-4c4b-b737-3fac6a2e5849" name="Changes" comment="feat(data): Implementa Modelo completo e todos os DAOs específicos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AnaliseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ComparacaoRegionalDtoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoAnualDtoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoMultiploDtoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AnaliseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/example/view/AnalyseView.fxml" afterDir="false" />
+    <list default="true" id="6fdb5022-02c2-4c4b-b737-3fac6a2e5849" name="Changes" comment="chore(db): Atualiza scripts de create e insert da tabela domicilios_internet_por_conexao&#10;&#10;Modifica os arquivos DDL (create) e DML (insert) na pasta 'database' para alinhar o schema e os dados com a versão atual da aplicação.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/domicilios_internet_por_conexao/INSERT.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/domicilios_internet_por_conexao/INSERT.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TesteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TesteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AnaliseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AnaliseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoMoradoresDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoDistribuicaoMoradoresDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoInternetDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoInternetDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoMoradoresDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CoeficienteVariacaoMoradoresDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DadosIbgeDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualInternetDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualInternetDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualMoradoresDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DistribuicaoPercentualMoradoresDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DomicilioInternetPorConexaoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DomicilioInternetPorConexaoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/GenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/MoradoresInternetPorConexaoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/MoradoresInternetPorConexaoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoMoradoresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoDistribuicaoMoradoresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoInternetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoInternetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoMoradoresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CoeficienteVariacaoMoradoresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/ComparacaoRegionalDtoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ComparacaoRegionalDtoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoAnualDtoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoAnualDtoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoMultiploDtoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/CrescimentoMultiploDtoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DadosIbge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DadosIbge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualInternetModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualInternetModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualMoradoresModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DistribuicaoPercentualMoradoresModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/DomiciliosInternetPorConexaoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/DomiciliosInternetPorConexaoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/MoradoresInternetPorConexaoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/MoradoresInternetPorConexaoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/AnaliseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AnaliseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/TelaPrincipal.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/view/AnalyseView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/view/AnalyseView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,33 +75,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Executar MainApp.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.TesteDao.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Executar MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TesteDao.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Java-Ide\Analise_Dados_IBGE\src\main\resources\org\example\view" />
@@ -124,7 +143,8 @@
       <workItem from="1761767750152" duration="216000" />
       <workItem from="1761767993681" duration="145000" />
       <workItem from="1761768155683" duration="336000" />
-      <workItem from="1761768509666" duration="4976000" />
+      <workItem from="1761768509666" duration="7558000" />
+      <workItem from="1762281992528" duration="7484000" />
     </task>
     <task id="LOCAL-00001" summary="feat(data): Implementa Modelo completo e todos os DAOs específicos">
       <option name="closed" value="true" />
@@ -134,7 +154,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761255363184</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feat: Implementa GUI JavaFX com filtros e tabela de dados dinâmica&#10;&#10;Implementa a interface gráfica da aplicação usando JavaFX. &#10;- Adiciona a view principal (AnalyseView.fxml) e o Controller (AnaliseController). &#10;- Conecta a view ao AnaliseService para carregar filtros do banco. &#10;- Implementa a exibição de dados na tabela principal. &#10;- Adiciona lógica para seleção dinâmica de colunas usando CheckBoxes. &#10;- Inclui classe Launcher para corrigir inicialização do JavaFX em projetos Maven.">
+      <option name="closed" value="true" />
+      <created>1761774826849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761774826849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore(db): Atualiza scripts de create e insert da tabela domicilios_internet_por_conexao&#10;&#10;Modifica os arquivos DDL (create) e DML (insert) na pasta 'database' para alinhar o schema e os dados com a versão atual da aplicação.">
+      <option name="closed" value="true" />
+      <created>1761776790405</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761776790405</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +189,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(data): Implementa Modelo completo e todos os DAOs específicos" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(data): Implementa Modelo completo e todos os DAOs específicos" />
+    <MESSAGE value="Feat: Implementa GUI JavaFX com filtros e tabela de dados dinâmica&#10;&#10;Implementa a interface gráfica da aplicação usando JavaFX. &#10;- Adiciona a view principal (AnalyseView.fxml) e o Controller (AnaliseController). &#10;- Conecta a view ao AnaliseService para carregar filtros do banco. &#10;- Implementa a exibição de dados na tabela principal. &#10;- Adiciona lógica para seleção dinâmica de colunas usando CheckBoxes. &#10;- Inclui classe Launcher para corrigir inicialização do JavaFX em projetos Maven." />
+    <MESSAGE value="chore(db): Atualiza scripts de create e insert da tabela domicilios_internet_por_conexao&#10;&#10;Modifica os arquivos DDL (create) e DML (insert) na pasta 'database' para alinhar o schema e os dados com a versão atual da aplicação." />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(db): Atualiza scripts de create e insert da tabela domicilios_internet_por_conexao&#10;&#10;Modifica os arquivos DDL (create) e DML (insert) na pasta 'database' para alinhar o schema e os dados com a versão atual da aplicação." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
